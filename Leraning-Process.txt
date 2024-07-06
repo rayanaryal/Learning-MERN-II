@@ -1,0 +1,39 @@
+⭕This one is 2nd project, beacuse I was unable to retrive the password from database. I was able to register the user but was unable to login. I tried to take help from chatgpt, but it was not resolved. Therefore, I have planned to start over. And it will be revision as well. Lets Go!!!
+
+⭕ First and foremost, we created one folder named Server. And we opened terminal to initalize node package manager, by typing npm init -y : MERN2024-II\server> npm init -y
+
+⭕ We are going to install express.js into our project. MERN2024-II\server> npm i express
+
+⭕ server.js is created. we made registeration page, login page home page.
+
+⭕ later we made router to shift all those pages, where we decided to use api/auth/register, api/auth/contact
+
+⭕ And we stil found that code in router is not as clean as it suppose to be. therefore we introuduced controller. Where we will be exporting something like module.exports = {login, register, contactUs}
+
+⭕ app.use(express.json()); // middleware to work with json data
+
+⭕ \MERN2024-II\server> npm i dotenv
+
+⭕
+
+⭕
+
+⭕
+⭕
+
+⭕
+
+⭕
+
+⭕
+
+⭕
+⭕
+
+⭕
+
+⭕
+
+⭕
+
+⭕
