@@ -20,11 +20,24 @@ const register = async(req, res)=>{
         if(userExist){
             return res.status(400).json({msg:"email already exist"})
         }
+        // Hash the password
+        const saltRound = 10;
+        const hashedPassword = await bcrypt.hash(password, saltRound);
 
-       const userCreated =  await User.create({username, email, phone, password });
+       const userCreated =  await User.create({
+        username,
+        email, 
+        phone, 
+        password:hashedPassword
+     });
 
-        res.status(201).json({ msg:userCreated });
+        res.status(201).json({ 
+            user:"Registeration successfull", 
+            token:await userCreated.generateToken(),
+            userId: userCreated._id.toString(),
+        });
     } catch (error) {
+        console.error(error)
        res.status(500).json("internal server error");
     }
 };

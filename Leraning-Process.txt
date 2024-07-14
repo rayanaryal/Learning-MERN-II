@@ -14,11 +14,11 @@
 
 ⭕ \MERN2024-II\server> npm i dotenv
 
-⭕
+⭕ we are now to installing json web token : \server> npm i jsonwebtoken
 
-⭕
+⭕ Well, we have completed 12th video where we leanrt about JWT.
 
-⭕
+⭕ TBC.. 13th 2:40 login Route.
 ⭕
 
 ⭕
