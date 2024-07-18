@@ -8,7 +8,7 @@ app.use(express.json()); // middleware to work with json data
 
 app.use("/api/auth", router);
 
-const PORT = 500;
+const PORT = 5000;
 connectDb().then(()=>{
     app.listen(PORT, () =>{
         console.log(`server is running at port : ${PORT}`)
