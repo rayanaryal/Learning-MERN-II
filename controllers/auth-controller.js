@@ -47,7 +47,7 @@ const register = async(req, res)=>{
 const login = async (req, res) => {
     try {
 
-        const {email, password } = req.body;
+        const {email, password } = req.body;// destructuring
 
         //email validation while login
         const userExist = await User.findOne({email});
@@ -58,7 +58,10 @@ const login = async (req, res) => {
                 return res.status(400).json({message:"Invalid credentials.Mate you dont have account yet"});
             }
 
-            const user = await bcrypt.compare(password, userExist.password);
+            // const user = await bcrypt.compare(password, userExist.password); // the first password is the one which user just typed whereas the last one is one we get from db.
+            // we are going to create the function for the above expression and that code will be used in model
+            const user = await userExist.comparePassword(password);
+
             if (user) {
                 res.status(200).json({
                     msg:"Login Successful",
